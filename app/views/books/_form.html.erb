@@ -1,0 +1,35 @@
+<%= form_for @book do |f| %>
+<% if @book.errors.any? %>
+<h4>THe book Could not be saved due to:</h4>
+<ul>
+  <% @book.errors.full_messages.each do |error|%>
+  <li><%= error%></li>
+  <% end%>
+</ul>
+<% end%>
+ <div class ="field">
+    <%= f.label :book_name %><br />
+    <%= f.text_field :book_name %>
+ </div>
+ <div class ="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+ </div>
+ <div class ="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+ </div>
+ 
+ <div class ="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+ </div>
+ 
+ <div class ="field">
+    <%= f.label :publication %><br />
+    <%= f.text_field :publication %>
+ </div>
+ <div class ="action">
+    <%= f.submit  %>
+ </div>
+<%end%>

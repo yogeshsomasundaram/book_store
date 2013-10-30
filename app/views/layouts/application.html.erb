@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><h1>Welcome to books store</h1></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1 align = "center"; colour = "#df12br"><%= link_to "Welcome to books store", books_path%></h1>
+
+<% flash.each do |key, value|%>
+  <%=  value %>
+<% end %>
+<%= yield %>
+
+</body>
+</html> 
